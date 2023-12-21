@@ -19,29 +19,29 @@ export default function CategoryDetails() {
 
   return (
     <div className="container mt-4">
-      <div className="row row-cols-1 row-cols-md-3 g-4">
-        {data.length ? (
-          data.map((product) => (
-            <div className="col mb-4" key={product._id}>
-              <div className="card">
+      {data.length ? (
+        <ul className="list-unstyled">
+          {data.map((product) => (
+            <li key={product._id} className="mb-3">
+              <div className="d-flex align-items-center">
                 <img
                   src={product.mainImage.secure_url}
-                  className="card-img-top"
+                  style={{ width: "200px", height: "300px", marginRight: "20px" }}
                   alt={product.name}
                 />
-                <div className="card-body">
-                  <h5 className="card-title">{product.name}</h5>
-                  <Link to={`/product/${product._id}`} className="btn btn-primary">
+                <div>
+                  <h5>{product.name}</h5>
+                  <Link to={`/product/${product._id}`} className="btn btn-danger">
                     Details
                   </Link>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <h2>No products found in this category</h2>
-        )}
-      </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <h2>No products found in this category</h2>
+      )}
     </div>
   );
 }

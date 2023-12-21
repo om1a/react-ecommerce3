@@ -141,7 +141,7 @@ export default function Cart() {
             </div>
             <div className="cart-summary">
               <h2>Cart summary</h2>
-              <button className="m-5 p-2 btn btn-primary" onClick={clearCartContext}>
+              <button className="m-5 p-2 btn btn-danger" onClick={clearCartContext}>
                 Clear Cart
               </button>
 

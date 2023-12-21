@@ -16,6 +16,7 @@ import Order from "../components/web/order/Order";
 import UserInfo from "../components/web/userprofile/UserInfo";
 import UserContact from "../components/web/userprofile/UserContact";
 import UserOrders from "../components/web/userprofile/UserOrders";
+import AllProd from "../components/web/aProducts/AllProd";
 
 
 
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "allProd",
+        element: <AllProd />,
       },
       {
         path: "cart",
