@@ -40,7 +40,7 @@ export default function Product() {
       );
 
       if (response.data.message === "success") {
-        toast("Review submitted successfully!", {
+        toast("Success", {
           position: "top-right",
           autoClose: 1500,
           hideProgressBar: false,
@@ -51,7 +51,7 @@ export default function Product() {
       }
     } catch (error) {
       console.error("Error submitting review:", error);
-      toast.error("already reviewed this product .", {
+      toast.error("Error", {
         position: "top-right",
         autoClose: 1500,
         hideProgressBar: false,
